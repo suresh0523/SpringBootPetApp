@@ -17,10 +17,11 @@ public class PetServiceImple implements PetService{
 	public String savePet(PetDetails petDetails) {
 		
 		//return petRepo.save(petDetails);
-		if (petRepo.save(petDetails) != null)
+		if (petRepo.save(petDetails) != null) {
 			return "Pet details saved successfully";
-		else
+		}else {
 			return "Something went wrong please try again";
+			}
 	}
 		//return petDetails;
 		

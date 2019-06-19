@@ -34,7 +34,7 @@ public class UserController {
 
 }
 	
-	@GetMapping("/buyPet/{petId}/{userId}")
+	@GetMapping("/buyPet/{petId}/{userRegistrationId}")
 	public String buyPet(@PathVariable Long petId,@PathVariable Long userRegistrationId) {
 		
 		return userService.buyPet(petId,userRegistrationId);

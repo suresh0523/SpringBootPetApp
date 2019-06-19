@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class PetDetails {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer petId;
+	private Long petId;
 	private Integer petAge;
 	private String petName;
 	private String petPlace;
@@ -26,11 +26,11 @@ public class PetDetails {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Integer getPetId() {
+	public Long getPetId() {
 		return petId;
 	}
 
-	public void setPetId(Integer petId) {
+	public void setPetId(Long petId) {
 		this.petId = petId;
 	}
 

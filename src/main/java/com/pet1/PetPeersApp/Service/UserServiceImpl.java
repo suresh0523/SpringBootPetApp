@@ -3,11 +3,12 @@ package com.pet1.PetPeersApp.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 import com.pet1.PetPeersApp.Model.PetDetails;
 import com.pet1.PetPeersApp.Model.UserRegistration;
 import com.pet1.PetPeersApp.Repository.PetRepository;
 import com.pet1.PetPeersApp.Repository.UserRepository;
+
+import springfox.documentation.swagger2.mappers.ModelMapper;
 
 @Service
 public class UserServiceImpl implements UserService{
@@ -17,6 +18,7 @@ public class UserServiceImpl implements UserService{
 	
 	@Autowired
 	PetRepository petRepo;
+	
 	
 	
 	
