@@ -7,5 +7,6 @@ public interface UserService {
 	public String addUser(UserRegistration userRegistration);
 	public String userAuthentication(String userName,String password);
 	public String userChecking();
+	public String buyPet(Long petId,Long userRegistrationId);
 	
 }

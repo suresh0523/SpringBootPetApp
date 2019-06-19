@@ -14,12 +14,17 @@ public class PetServiceImple implements PetService{
 	@Autowired
 	PetRepository petRepo;
 	
-	public PetDetails savePet(PetDetails petDetails) {
+	public String savePet(PetDetails petDetails) {
 		
-		return petRepo.save(petDetails);
+		//return petRepo.save(petDetails);
+		if (petRepo.save(petDetails) != null)
+			return "Pet details saved successfully";
+		else
+			return "Something went wrong please try again";
+	}
 		//return petDetails;
 		
-	}
+	
 
 	@Override
 	public List<PetDetails> getAllPets() {
@@ -30,8 +35,19 @@ public class PetServiceImple implements PetService{
 	}
 
 	@Override
-	public List<PetDetails> getMyPets(Long ownerUserId) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<PetDetails> getMyPets(Long userRegistationId) {
+		return petRepo.findAll(userRegistationId);
 	}
+
+//	@Override
+//	public PetDetails buyPet(PetDetails petDetails) {
+//		
+//		
+//		petDetails.setPetAction("Buy");
+//		
+//		return petRepo.save(petDetails);
+//		
+//		
+//	
+//	}
 }

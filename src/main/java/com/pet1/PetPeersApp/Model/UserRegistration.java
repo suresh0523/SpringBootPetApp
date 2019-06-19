@@ -10,13 +10,13 @@ import javax.persistence.Table;
 @Table(name = "user_info")
 public class UserRegistration {
 	@Id
-	@GeneratedValue(strategy= GenerationType.AUTO)
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
 private Long userRegistationId;
 private String userName;
 private String password;
 public UserRegistration() {
 	super();
-	// TODO Auto-generated constructor stub
+	
 }
 public UserRegistration(Long userRegistationId, String userName, String password) {
 	super();

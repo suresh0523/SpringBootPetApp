@@ -1,6 +1,8 @@
 package com.pet1.PetPeersApp.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,5 +33,11 @@ public class UserController {
 	
 
 }
+	
+	@GetMapping("/buyPet/{petId}/{userId}")
+	public String buyPet(@PathVariable Long petId,@PathVariable Long userRegistrationId) {
+		
+		return userService.buyPet(petId,userRegistrationId);
+	}
 
 }
